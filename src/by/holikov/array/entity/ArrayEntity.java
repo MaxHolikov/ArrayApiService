@@ -5,9 +5,8 @@ import java.util.Arrays;
 public class ArrayEntity {
     private int[] array;
 
-   public ArrayEntity(int ... array){ //метод с переменным числом параметров
+   public ArrayEntity(int ... array){
         this.array=array;
-       // System.out.println(Arrays.toString(array));
     }
 
      public int[] getArray(){
@@ -17,6 +16,6 @@ public class ArrayEntity {
     }
 
     public void setArray(int ... array) {
-            this.array=array;
+       this.array=array;
     }
 }
