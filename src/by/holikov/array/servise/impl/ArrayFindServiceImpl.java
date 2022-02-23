@@ -1,11 +1,15 @@
-package by.holikov.array.servise;
-import java.util.Arrays;
-import by.holikov.array.entity.ArrayEntity;
+package by.holikov.array.servise.impl;
 
-public class ArrayFindService {
-    public ArrayFindService() {
+import java.util.Arrays;
+
+import by.holikov.array.entity.ArrayEntity;
+import by.holikov.array.servise.ArrayFindService;
+
+public class ArrayFindServiceImpl implements ArrayFindService {
+    public ArrayFindServiceImpl() {
     }
 
+    @Override
     public int findMaxElement(ArrayEntity array) {
         int[] newArray = array.getArray();
         int maxElement = newArray[0];
@@ -18,6 +22,7 @@ public class ArrayFindService {
         return maxElement;
     }
 
+    @Override
     public void findMinArray(ArrayEntity array) {
         int[] newArray = array.getArray();
         int minArray = newArray[0];
@@ -29,6 +34,7 @@ public class ArrayFindService {
         System.out.println("minArrayElement = " + minArray);
     }
 
+    @Override
     public void findNegativeNumber(ArrayEntity array) {
         int[] newArray = array.getArray();
         int NegativeNumberArray = 0;
@@ -40,6 +46,7 @@ public class ArrayFindService {
         System.out.println("NegativeNumberArray = " + NegativeNumberArray);
     }
 
+    @Override
     public void findPositiveNumber(ArrayEntity array) {
         int[] newArray = array.getArray();
         int PositiveNumberArray = 0;

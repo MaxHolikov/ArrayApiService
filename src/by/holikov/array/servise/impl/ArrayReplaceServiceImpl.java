@@ -1,14 +1,16 @@
-package by.holikov.array.servise;
+package by.holikov.array.servise.impl;
 
 import by.holikov.array.entity.ArrayEntity;
+import by.holikov.array.servise.ArrayReplaceService;
 
 import java.util.Arrays;
 
-public class ArrayReplaceService {
+public class ArrayReplaceServiceImpl implements ArrayReplaceService {
 
-    public ArrayReplaceService() {
+    public ArrayReplaceServiceImpl() {
     }
 
+    @Override
     public void replaceNegativeNumber(ArrayEntity array) {
         int[] newArray = array.getArray();
         for (int i = 0; i != newArray.length; i++) {
@@ -20,11 +22,12 @@ public class ArrayReplaceService {
         }
     }
 
-    public  void replaceMaxNumber(ArrayEntity array, int maxElement) {
+    @Override
+    public void replaceNumber(ArrayEntity array, int replacementNumber, int number) {
         int[] newArray = array.getArray();
         for (int i = 0; i != newArray.length; i++) {
-            if (newArray[i] == maxElement) {
-                newArray[i] = 0;
+            if (newArray[i] == replacementNumber) {
+                newArray[i] = number;
             }
             array.setArray(newArray);
 
